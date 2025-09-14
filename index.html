@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>My Digital Scrapbook</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="logo">My Digital Scrapbook ✿</div>
+    <nav class="nav">
+      
+      
+    </nav>
+  </header>
+
+  <main class="main">
+    <aside class="sticker-panel">
+      <h3>Stickers</h3>
+      <div class="stickers">
+        <img src="./assets/sticker1.png" class="sticker" draggable="true" alt="sticker1"/>
+        <img src="./assets/sticker2.ico" class="sticker" draggable="true" alt="sticker2"/>
+        <img src="./assets/sticker3.png" class="sticker small" draggable="true" alt="sticker3"/>
+      </div>
+      <p class="hint">Drag stickers onto the scrapbook. Use toolbar for text, drawing, uploads.</p>
+      <button id="start-btn" class="cta">Start Scrapbooking</button>
+    </aside>
+
+    <section class="canvas-wrap">
+      <canvas id="scrapbook-canvas" width="900" height="650"></canvas>
+
+      <div class="controls">
+        <button id="draw-btn">Pencil</button>
+        <input type="color" id="color-picker" value="#000000">
+        <input type="range" id="brush-size" min="1" max="20" value="5">
+        <button id="text-btn"> Add Text</button>
+        <input type="file" id="image-upload" accept="image/*">
+        <button id="delete-btn">Delete</button>
+        
+  
+</select>
+
+
+<button id="clear-btn">🧹 Clear All</button>
+
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Made with pastel skies and buttery dreams ✿</p>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/5.3.0/fabric.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,161 @@
+:root{
+  --sky: #BED9F4;
+  --butter: #FEFDD0;
+  --muted: #6b6b6b;
+  --shadow: 0 8px 18px rgba(17,17,17,0.08);
+  font-family: 'Nunito', system-ui, sans-serif;
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0;
+  background:linear-gradient(to bottom, var(--sky) 0 53%, var(--butter) 53% 100%);
+  color:#25313a;
+}
+
+.site-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:18px 36px;
+}
+.logo{
+  font-weight:800;
+  font-size:20px;
+  color:#fff9d6;
+}
+.nav a{
+  color:rgba(0,0,0,0.55);
+  margin-left:14px;
+  text-decoration:none;
+  font-weight:600;
+  padding:6px 10px;
+  background:rgba(255,255,255,0.12);
+  border-radius:8px;
+}
+
+.main{
+  display:flex;
+  gap:20px;
+  padding:18px;
+  align-items:flex-start;
+}
+
+.sticker-panel{
+  width:220px;
+  background:rgba(255,255,255,0.6);
+  border-radius:12px;
+  padding:12px;
+  box-shadow:var(--shadow);
+}
+.stickers{
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+  align-items:center;
+}
+.sticker{
+  width:160px;
+  border:6px solid rgba(255,255,255,0.9);
+  border-radius:12px;
+  cursor:grab;
+}
+.sticker.small{width:90px}
+
+.canvas-wrap{
+  flex:1;
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+}
+#scrapbook-canvas{
+  border-radius:16px;
+  box-shadow:var(--shadow);
+  background: url("./assets/scrapbook-bg.png") center/cover no-repeat;
+}
+.controls{
+  display:flex;
+  gap:10px;
+  align-items:center;
+}
+.controls button, .controls input[type="color"], .controls input[type="file"]{
+  padding:6px 10px;
+  border-radius:6px;
+  border:1px solid rgba(0,0,0,0.1);
+  background:white;
+  cursor:pointer;
+}
+.site-footer{
+  padding:18px;
+  text-align:center;
+  color:rgba(0,0,0,0.5);
+}
+
+/* Right-side toolbar */
+.controls {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+  position: absolute;
+  right: 20px;
+  top: 120px;
+  background: var(--butter);
+  padding: 14px;
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+}
+
+.controls button,
+.controls input[type="color"],
+.controls input[type="file"] {
+  padding: 10px 14px;
+  border-radius: 12px;
+  border: none;
+  background: var(--sky);
+  color: #333;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: var(--shadow);
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.controls button:hover {
+  background: #a6c8ec;
+  transform: scale(1.05);
+}
+
+.controls input[type="color"] {
+  padding: 2px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+#toolbar {
+  width: 100px; /* slimmer */
+  background: #fff8dc;
+  padding: 10px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+#toolbar button {
+  background: #add8e6;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+#toolbar button:hover {
+  background: #87ceeb;
+}
+
+#toolbar input[type="range"] {
+  width: 100%;
+}
